@@ -1,0 +1,49 @@
+body{
+  
+}
+
+
+.container{
+
+
+
+
+}
+
+.main-nav{
+
+  margin-top: 80px;
+
+}
+.main-nav  a{
+
+  text-decoration: none;
+}
+.main-nav ul{
+
+  display:flex;
+  flex-direction:row-reverse;;
+
+
+}
+.main-nav li{
+
+   list-style-type: none;
+
+   margin-right:40px;
+
+}
+
+.main-content {
+
+   margin-top:100px;
+   width:60%;
+
+
+}
+.main-content p {
+
+ margin: 0 auto;
+ text-align:center;
+
+}
