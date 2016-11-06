@@ -29,14 +29,17 @@ margin-bottom: 40px;
 
 
 }
-#about-me{
-
-margin-top: 40px;
-margin-bottom: 50px;
+#about-me {
+   margin-top: 40px;
+   margin-bottom: 50px;
 
 }
 
-#project{
+#project {
    margin-top:100px;
    margin-bottom:60px;
+}
+
+#about {
+   position: relative;
 }

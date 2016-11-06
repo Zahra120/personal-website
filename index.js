@@ -5,7 +5,7 @@ pug = require ('pug');
 //bodyParser = require('body-parser');
 var app = express();
 // nycdaamswdi@gmail.com // nycdarocks
-var transporter = nodemailer.createTransport('smtps://nycdaamswdi%40gmail.com:nycdarocks@smtp.gmail.com');
+var transporter = nodemailer.createTransport('smtps://'+ process.env.PERSONAL_WEBSITE_EMAIL_ADDRESS +':'+ process.env.EMAIL_PASSWORD + '@smtp.gmail.com');
 
 
 app.use(express.static('public'));
@@ -14,14 +14,14 @@ app.use(morgan('dev'));
 
 app.get('/', function(req, res){
    console.log('requesting homepage');
-   res.sendFile(__dirname + '/index2.html');
+   res.sendFile(__dirname + '/index.html');
 });
 
 app.post('/send-email' , function(req, res){
    console.log('post request to homepage');
    console.log(req.body);
    var mailOptions = {
-    from: 'nycdaamswdi@gmail.com', // sender address
+    from: process.env.PERSONAL_WEBSITE_EMAIL_ADDRESS, // sender address
     to: 'ghanbarifam@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Hello world 🐴', // plaintext body
